@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth" data-lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="welcome">منتجع ضفاف دجلة الفاخر</title>
+    <meta http-equiv="refresh" content="2; url=home/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F4E5C2;
+            --gold-dark: #B8860B;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+            --success: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #0a1929 0%, #1a365d 100%);
+            color: var(--light);
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        /* Animated Background Elements */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath fill='%23D4AF37' fill-opacity='0.4' d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-2.242 2.243L1.716.828 2.544 0h2.829zM48.97 0l-8.486 8.485L37.058 7.07 44.284 0h4.686zM11.284 0l7.07 7.07L15.93 8.485 7.758.301 7.6.144 7.07 0h4.213zM34.887 0l-5.657 5.657-1.414-1.414L32.301 0h2.586zM20.444 0L12.1 8.343l-1.415-1.415L18.312 0h2.132zM60 5.373v2.827l-2.243-2.242L60 5.373zM0 5.373l2.242 2.243L.828 8.485 0 7.657V5.373zM60 11.284v4.686l-7.071-7.07L60 11.284zM0 11.284l7.071-7.07-1.415-1.415L8.486 0h2.798zM34.887 0l-5.657-5.657-1.414 1.415L32.3 0h2.586zM20.444 0l8.485-8.485-1.414-1.415L18.313 0h2.13zM54.627 0l.829-.828-1.415-1.415L51.8 0h2.827zM5.373 0l-2.242-2.243-1.415 1.414L2.544 0h2.829z'/%3E%3C/svg%3E");
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .floating-elements span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: rgba(212, 175, 55, 0.3);
+            bottom: -150px;
+            animation: float 25s linear infinite;
+            border-radius: 50%;
+        }
+        
+        .floating-elements span:nth-child(1) {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+            animation-duration: 15s;
+        }
+        
+        .floating-elements span:nth-child(2) {
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 20s;
+        }
+        
+        .floating-elements span:nth-child(3) {
+            left: 70%;
+            width: 50px;
+            height: 50px;
+            animation-delay: 4s;
+            animation-duration: 30s;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+            }
+        }
+        
+        .redirect-container {
+            background: rgba(26, 32, 44, 0.9);
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            max-width: 480px;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .redirect-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .logo::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            animation: pulse 2s infinite;
+            box-sizing: border-box;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            70% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+        
+        h1 {
+            margin: 0 0 1.5rem;
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+            border-radius: 3px;
+        }
+        
+        p {
+            color: #a0aec0;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 2rem;
+            border: 4px solid rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--gold);
+            animation: spin 1s ease-in-out infinite;
+            position: relative;
+        }
+        
+        .spinner::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            bottom: -4px;
+            left: -4px;
+            border: 4px solid transparent;
+            border-top-color: var(--gold-dark);
+            border-radius: 50%;
+            animation: spin 1.5s ease-in-out infinite;
+            opacity: 0.7;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #1a1a1a;
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+            font-size: 1.05rem;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+            z-index: -1;
+            transition: opacity 0.4s ease;
+            opacity: 0;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn:hover::before {
+            opacity: 1;
+        }
+        
+        .btn i {
+            margin-right: 8px;
+            font-size: 1.1em;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover i {
+            transform: translateX(3px);
+        }
+        
+        .dark-mode {
+            display: none;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+                color: #f3f4f6;
+            }
+            
+            .redirect-container {
+                background: #1f2937;
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            }
+            
+            p {
+                color: #9ca3af;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    <div class="floating-elements">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div class="redirect-container">
+        <div class="logo">
+            <i class="fas fa-pagelines"></i>
+        </div>
+        <h1>منتجع ضفاف دجلة</h1>
+        <p>نرحب بكم في أرقى منتجع سياحي على ضفاف نهر دجلة، حيث تجتمع الفخامة والراحة مع عراقة التراث العراقي</p>
+        <div class="spinner"></div>
+        <a href="home/" class="btn">
+            <i class="fas fa-map-marker-alt"></i>
+            ابدأ رحلتك
+        </a>
+    </div>
+
+    <script>
+        // Add smooth transition before redirect
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add loading class to body
+            document.body.classList.add('page-loading');
+            
+            // Redirect after a short delay to allow animation
+            setTimeout(function() {
+                if (!window.location.href.includes('/home/')) {
+                    window.location.href = 'home/';
+                }
+            }, 1500);
+        });
+    </script>
+    
+    <!-- Font Awesome for the water icon -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
+            <div class="flex justify-between items-center py-3">
+                <!-- الشعار -->
+                <a href="#" class="flex items-center space-x-2 space-x-reverse group">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white text-xl font-bold">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent">
+                        المنتجع الفاخر
+                    </span>
+                </a>
+
+                <!-- قائمة التنقل الرئيسية -->
+                <nav class="hidden md:flex items-center space-x-1 space-x-reverse">
+                    <a href="#" class="px-4 py-2.5 rounded-lg font-medium flex items-center group transition-all">
+                        <i class="fas fa-home ml-2 text-blue-400 group-hover:text-blue-300"></i>
+                        <span class="group-hover:text-blue-300">الرئيسية</span>
+                    </a>
+                    <a href="#offers" class="px-4 py-2.5 rounded-lg font-medium flex items-center group transition-all">
+                        <i class="fas fa-tag ml-2 text-blue-400 group-hover:text-blue-300"></i>
+                        <span class="group-hover:text-blue-300">العروض</span>
+                    </a>
+                    <a href="#gallery" class="px-4 py-2.5 rounded-lg font-medium flex items-center group transition-all">
+                        <i class="fas fa-images ml-2 text-blue-400 group-hover:text-blue-300"></i>
+                        <span class="group-hover:text-blue-300">معرض الصور</span>
+                    </a>
+                    <a href="#contact" class="px-4 py-2.5 rounded-lg font-medium flex items-center group transition-all">
+                        <i class="fas fa-envelope ml-2 text-blue-400 group-hover:text-blue-300"></i>
+                        <span class="group-hover:text-blue-300">اتصل بنا</span>
+                    </a>
+                </nav>
+
+                <!-- الأزرار الجانبية -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <a href="settings/" id="settings-button" class="flex items-center space-x-2 space-x-reverse px-4 py-2.5 rounded-lg font-medium transition-all">
+                        <i class="fas fa-cog text-blue-400"></i>
+                        <span class="hidden sm:inline">الإعدادات</span>
+                    </a>
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-blue-800/30 transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- القائمة المتنقلة للجوال -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gradient-to-b from-blue-900/95 to-blue-800/95 backdrop-blur-md">
+            <div class="container mx-auto px-4 py-3 space-y-1">
+                <a href="#" class="flex items-center space-x-2 space-x-reverse px-4 py-3 rounded-lg hover:bg-blue-700/50 transition-colors group">
+                    <i class="fas fa-home w-5 text-center text-blue-300 group-hover:text-white"></i>
+                    <span class="font-medium">الرئيسية</span>
+                </a>
+                <a href="#offers" class="flex items-center space-x-2 space-x-reverse px-4 py-3 rounded-lg hover:bg-blue-700/50 transition-colors group">
+                    <i class="fas fa-tag w-5 text-center text-blue-300 group-hover:text-white"></i>
+                    <span class="font-medium">العروض</span>
+                </a>
+                <a href="#gallery" class="flex items-center space-x-2 space-x-reverse px-4 py-3 rounded-lg hover:bg-blue-700/50 transition-colors group">
+                    <i class="fas fa-images w-5 text-center text-blue-300 group-hover:text-white"></i>
+                    <span class="font-medium">معرض الصور</span>
+                </a>
+                <a href="#contact" class="flex items-center space-x-2 space-x-reverse px-4 py-3 rounded-lg hover:bg-blue-700/50 transition-colors group">
+                    <i class="fas fa-envelope w-5 text-center text-blue-300 group-hover:text-white"></i>
+                    <span class="font-medium">اتصل بنا</span>
+                </a>
+                <div class="border-t border-blue-700/50 my-2"></div>
+                <a href="settings/" class="flex items-center space-x-2 space-x-reverse px-4 py-3 rounded-lg hover:bg-blue-700/50 transition-colors group">
+                    <i class="fas fa-cog w-5 text-center text-blue-300 group-hover:text-white"></i>
+                    <span class="font-medium">الإعدادات</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- الهيرو -->
+        <section class="relative h-96 bg-cover bg-center flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative z-10 text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">مرحباً بكم في منتجع ضفاف دجلة</h1>
+                <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">استمتع بتجربة إقامة فاخرة في أحضان الطبيعة مع إطلالات خلابة على نهر دجلة</p>
+                <a href="home/" class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-bold rounded-full hover:opacity-90 transition-all transform hover:scale-105">
+                    ابدأ رحلتك
+                    <i class="fas fa-arrow-left mr-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- العروض -->
+        <section id="offers" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">عروضنا الحصرية</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- عرض 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold">باقة العائلة المميزة</h3>
+                                <span class="bg-red-100 text-red-800 text-sm font-medium px-2.5 py-0.5 rounded">خصم 30%</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">إقامة لمدة 3 ليالي مع إفطار مجاني للأطفال تحت سن 12 سنة.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-blue-700">1,499 ريال</span>
+                                <span class="text-gray-500 line-through">2,142 ريال</span>
+                            </div>
+                            <button class="w-full mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition duration-300">احجز الآن</button>
+                        </div>
+                    </div>
+
+                    <!-- عرض 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1534258936925-d400c7887571?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80');"></div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold">عطلة نهاية الأسبوع</h3>
+                                <span class="bg-red-100 text-red-800 text-sm font-medium px-2.5 py-0.5 rounded">خصم 25%</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">إقامة لمدة ليلتين مع وجبة عشاء رومانسية.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-blue-700">899 ريال</span>
+                                <span class="text-gray-500 line-through">1,199 ريال</span>
+                            </div>
+                            <button class="w-full mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition duration-300">احجز الآن</button>
+                        </div>
+                    </div>
+
+                    <!-- عرض 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold">باقة الاستجمام الكامل</h3>
+                                <span class="bg-red-100 text-red-800 text-sm font-medium px-2.5 py-0.5 rounded">خصم 40%</span>
+                            </div>
+                            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto" data-i18n="welcome_subtitle">استمتع بتجربة إقامة فاخرة في أحضان الطبيعة مع إطلالات خلابة على نهر دجلة</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-blue-700">2,499 ريال</span>
+                                <span class="text-gray-500 line-through">4,165 ريال</span>
+                            </div>
+                            <button class="w-full mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition duration-300">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- المميزات -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">لماذا تختار منتجعنا؟</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                        <div class="text-4xl text-blue-700 mb-4">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">موقع مميز</h3>
+                        <p class="text-gray-600">يطل المنتجع على شاطئ خاص مع إطلالة بانورامية ساحرة على البحر.</p>
+                    </div>
+                    <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                        <div class="text-4xl text-blue-700 mb-4">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">مطاعم فاخرة</h3>
+                        <p class="text-gray-600">تشكيلة واسعة من المأكولات العالمية والمحلية بإشراف أشهر الطهاة.</p>
+                    </div>
+                    <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                        <div class="text-4xl text-blue-700 mb-4">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">مرافق ترفيهية</h3>
+                        <p class="text-gray-600">سبا، صالات رياضية، مسابح، وأنشطة ترفيهية لجميع الأعمار.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- معرض الصور -->
+        <section id="gallery" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">معرض الصور</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="h-48 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="غرفة فندقية فاخرة" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="h-48 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1539635278303-d400c7887571?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="مسبح المنتجع" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="h-48 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo 1540206395-68808572332f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1526&q=80" alt="مطعم المنتجع" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="h-48 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1596178298377-633a7f0c1e09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="جلسة استرخاء" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- اتصل بنا -->
+        <section id="contact" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">اتصل بنا</h2>
+                <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
+                    <form>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">الاسم الكامل</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">البريد الإلكتروني</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">الموضوع</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mt-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">الرسالة</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <div class="mt-8">
+                            <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-md transition duration-300">إرسال الرسالة</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">المنتجع الفاخر</h3>
+                    <p class="text-gray-400">وجهتك المثالية للاسترخاء والرفاهية. نقدم لكم تجربة إقامة فريدة مع أفضل الخدمات والمرافق.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">الرئيسية</a></li>
+                        <li><a href="#offers" class="text-gray-400 hover:text-white transition">العروض</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition">معرض الصور</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">معلومات الاتصال</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 ml-2"></i>
+                            <span>شارع الكورنيش، جدة، المملكة العربية السعودية</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone ml-2"></i>
+                            <span>+966 12 345 6789</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope ml-2"></i>
+                            <span>info@luxuryresort.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">تابعنا</h4>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-snapchat"></i></a>
+                    </div>
+                    <div class="mt-6">
+                        <h5 class="font-medium mb-2">اشترك في نشرتنا البريدية</h5>
+                        <div class="flex">
+                            <input type="email" placeholder=

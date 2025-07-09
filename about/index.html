@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>عن منتجع ضفاف دجلة</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Tajawal -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Ensure all icons are gold by default */
+        i {
+            color: #D4AF37 !important;
+        }
+        
+        /* Smooth page transitions */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .page-transition {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Custom styles for the map container */
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 0.75rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all duration-300 ease-in-out min-h-screen page-transition">
+    <!-- الهيدر -->
+    <header class="fixed w-full top-0 left-0 right-0 z-50 bg-gradient-to-r from-gray-900 to-gray-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../home/" class="text-2xl font-bold hover:text-yellow-300 transition flex items-center">
+                    <i class="fas fa-arrow-right ml-2"></i>
+                    العودة للرئيسية
+                </a>
+                <div class="text-xl md:text-2xl font-bold text-yellow-400">عن المنتجع</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden">
+                <!-- صورة الغلاف -->
+                <div class="h-64 md:h-80 bg-cover bg-center flex items-center justify-center" style="background-image: url('../images/djlanight.jpg');">
+                    <div class="text-center text-white p-6">
+                        <h1 class="text-3xl md:text-4xl font-bold mb-4">منتجع ضفاف دجلة الفاخر</h1>
+                        <p class="text-lg md:text-xl opacity-90">تحفة معمارية على ضفاف نهر دجلة</p>
+                    </div>
+                </div>
+                
+                <!-- محتوى الصفحة -->
+                <div class="p-6 md:p-8">
+                    <div class="prose prose-lg dark:prose-invert max-w-none">
+                        <h2 class="text-2xl font-bold text-yellow-500 mb-6">مرحباً بكم في منتجع ضفاف دجلة</h2>
+                        
+                        <p class="mb-6 text-lg leading-relaxed">
+                            يسرنا أن نرحب بكم في منتجع ضفاف دجلة الفاخر، الذي تم افتتاحه عام 2025، ليكون تحفة معمارية فريدة تجمع بين الفخامة الحديثة وعراقة التراث العراقي. يقع المنتجع في قلب العاصمة بغداد - الراشدية على ضفاف نهر دجلة الخالد.
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-8 my-12">
+                            <div>
+                                <h3 class="text-xl font-bold mb-4 text-yellow-400">موقعنا</h3>
+                                <p class="mb-4">
+                                    <i class="fas fa-map-marker-alt ml-2"></i>
+                                    بغداد - الراشدية، على ضفاف نهر دجلة
+                                </p>
+                                <p class="mb-4">
+                                    <i class="far fa-calendar-alt ml-2"></i>
+                                    تم الافتتاح: 2025
+                                </p>
+                                <p class="mb-4">
+                                    <i class="fas fa-hotel ml-2"></i>
+                                    منتجع فاخر 5 نجوم
+                                </p>
+                            </div>
+                            
+                            <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-xl">
+                                <h3 class="text-xl font-bold mb-4 text-yellow-400">ساعات العمل</h3>
+                                <p class="mb-2"><span class="font-medium">السبت - الخميس:</span> 8:00 صباحاً - 11:00 مساءً</p>
+                                <p><span class="font-medium">الجمعة:</span> 2:00 ظهراً - 11:00 مساءً</p>
+                                <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">* يرجى الحجز المسبق للحصول على أفضل الخدمات</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mt-12 mb-6 text-yellow-400">موقعنا على الخريطة</h3>
+                        <div class="map-container bg-gray-200 dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.031104347518!2d44.36638831520276!3d33.31504668084991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDE4JzU0LjIiTiA0NMKwMjInMTMuMCJF!5e0!3m2!1sen!2siq!4v1620000000000!5m2!1sen!2siq" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <p class="text-center mt-4 text-gray-500 dark:text-gray-400">موقع منتجع ضفاف دجلة على الخريطة</p>
+                        
+                        <div class="mt-12 bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-xl border border-yellow-100 dark:border-yellow-900/30">
+                            <h3 class="text-xl font-bold mb-4 text-yellow-600 dark:text-yellow-400">رؤيتنا</h3>
+                            <p class="leading-relaxed">
+                                نسعى لأن نكون الوجهة المفضلة للسياح والزوار في بغداد، من خلال تقديم تجربة إقامة فريدة تجمع بين الفخامة والراحة والضيافة العراقية الأصيلة. نلتزم بمعايير الجودة العالمية مع الحفاظ على الهوية العراقية الأصيلة في كل تفاصيل إقامتكم.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="bg-gray-900 text-white py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2 space-x-reverse">
+                        <div class="w-10 h-10 rounded-xl bg-yellow-500 flex items-center justify-center text-white text-xl">
+                            <i class="fas fa-pagelines"></i>
+                        </div>
+                        <span class="text-xl font-bold">ضفاف دجلة</span>
+                    </div>
+                </div>
+                <div class="text-sm text-gray-400">
+                    © 2025 منتجع ضفاف دجلة. جميع الحقوق محفوظة
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll to top on page load
+        window.onload = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            
+            // Check for saved theme preference
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        };
+    </script>
+</body>
+</html>

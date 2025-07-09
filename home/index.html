@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth" style="text-align: right;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        /* Smooth page transitions */
+        html {
+            scroll-behavior: smooth;
+        }
+        .page-transition {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Ensure all icons are gold by default */
+        i {
+            color: #D4AF37 !important;
+        }
+    </style>
+    <title>منتجع ضفاف دجلة - الصفحة الرئيسية</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Tajawal -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* تخصيصات إضافية للهواتف */
+        @media (max-width: 640px) {
+            .hero-section {
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+            }
+            .section-padding {
+                padding: 2.5rem 1rem;
+            }
+        }
+        
+        /* خط التاجوال */
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all duration-300 ease-in-out page-transition">
+    <!-- شريط التنقل العلوي -->
+    <header class="fixed w-full top-0 left-0 right-0 z-50 bg-gradient-to-r from-gray-900 to-gray-800 backdrop-blur-md shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- الشعار -->
+                <a href="index.html" class="flex items-center space-x-3 space-x-reverse group">
+                    <div class="relative">
+                        <div class="w-14 h-14 flex items-center justify-center group-hover:rotate-3 transition-transform duration-500">
+                            <img src="../images/djlaicon.png" alt="شعار المنتجع" class="w-full h-full object-contain">
+                        </div>
+                    </div>
+                    <div class="text-right transform group-hover:-translate-x-1 transition-transform duration-300">
+                        <h1 class="text-xl md:text-2xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400 bg-clip-text text-transparent">
+                            منتجع ضفاف دجلة
+                        </h1>
+                        <p class="text-xs md:text-sm text-white -mt-1 font-medium">
+                            <span class="inline-block transform group-hover:translate-x-1 transition-transform duration-300">
+                                الفخامة والتراث العراقي الأصيل
+                            </span>
+                        </p>
+                    </div>
+                </a>
+
+                <!-- قائمة التنقل الرئيسية -->
+                <nav class="hidden md:flex items-center space-x-1 space-x-reverse">
+                    <a href="../home/" class="px-5 py-3 rounded-full font-medium flex items-center group transition-all relative overflow-hidden">
+                        <span class="absolute inset-0 bg-yellow-600/10 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+                        <i class="fas fa-home ml-2 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-200"></i>
+                        <span class="group-hover:text-yellow-300 transition-colors duration-200">الرئيسية</span>
+                    </a>
+                    <a href="../about/" class="px-5 py-3 rounded-full font-medium flex items-center group transition-all relative overflow-hidden">
+                        <span class="absolute inset-0 bg-yellow-600/10 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+                        <i class="fas fa-info-circle ml-2 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-200"></i>
+                        <span class="group-hover:text-yellow-300 transition-colors duration-200">عن المنتجع</span>
+                    </a>
+
+                    <a href="#gallery" class="px-5 py-3 rounded-full font-medium flex items-center group transition-all relative overflow-hidden">
+                        <span class="absolute inset-0 bg-yellow-600/10 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+                        <i class="fas fa-images ml-2 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-200"></i>
+                        <span class="group-hover:text-yellow-300 transition-colors duration-200">معرض الصور</span>
+                    </a>
+                    <a href="#contact" class="px-5 py-3 rounded-full font-medium flex items-center group transition-all relative overflow-hidden">
+                        <span class="absolute inset-0 bg-yellow-600/10 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+                        <i class="fas fa-phone-alt ml-2 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-200"></i>
+                        <span class="group-hover:text-yellow-300 transition-colors duration-200">اتصل بنا</span>
+                    </a>
+                    <a href="../resort-system/" class="px-5 py-3 rounded-full font-medium flex items-center group transition-all relative overflow-hidden">
+                        <span class="absolute inset-0 bg-yellow-600/10 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+                        <i class="fas fa-hotel ml-2 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-200"></i>
+                        <span class="group-hover:text-yellow-300 transition-colors duration-200">نظام المنتجع</span>
+                    </a>
+                    <a href="#" class="ml-2 px-5 py-2.5 bg-gradient-to-r from-yellow-600 to-yellow-500 text-white rounded-full font-medium flex items-center hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 transform hover:-translate-y-0.5">
+                        <i class="fas fa-calendar-alt ml-2"></i>
+                        احجز الآن
+                    </a>
+                </nav>
+
+                <!-- الأزرار الجانبية -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <a href="../settings/" id="settings-button" class="flex items-center space-x-2 space-x-reverse px-4 py-2 rounded-lg font-medium transition-all bg-yellow-500/10 text-yellow-400 hover:bg-yellow-500/20 hover:text-yellow-300">
+                        <i class="fas fa-cog"></i>
+                        <span class="hidden sm:inline">الإعدادات</span>
+                    </a>
+                    <button id="mobile-menu-button" class="text-yellow-400 hover:text-yellow-300 focus:outline-none transition-colors duration-200">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- القائمة المتنقلة للجوال -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-yellow-900/30">
+            <div class="container mx-auto px-4 py-2 space-y-1">
+                <a href="index.html" class="flex items-center space-x-2 space-x-reverse px-4 py-3 rounded-lg bg-yellow-900/20 text-yellow-400">
+                    <i class="fas fa-home w-5 text-center text-yellow-400"></i>
+                    <span class="font-medium">الرئيسية</span>
+                </a>
+                <a href="../about/" class="flex items-center space-x-2 space-x-reverse px-4 py-3 rounded-lg text-yellow-300 hover:bg-yellow-900/10 hover:text-yellow-400 transition-colors">
+                    <i class="fas fa-info-circle w-5 text-center text-yellow-400"></i>
+                    <span class="font-medium">عن المنتجع</span>
+                </a>
+
+                <a href="#gallery" class="flex items-center space-x-2 space-x-reverse px-4 py-3 rounded-lg text-yellow-300 hover:bg-yellow-900/10 hover:text-yellow-400 transition-colors">
+                    <i class="fas fa-images w-5 text-center text-yellow-400"></i>
+                    <span class="font-medium">معرض الصور</span>
+                </a>
+                <a href="#contact" class="flex items-center space-x-2 space-x-reverse px-4 py-3 rounded-lg text-yellow-300 hover:bg-yellow-900/10 hover:text-yellow-400 transition-colors">
+                    <i class="fas fa-envelope w-5 text-center text-yellow-400"></i>
+                    <span class="font-medium">اتصل بنا</span>
+                </a>
+                <div class="px-4 py-3">
+                    <a href="#" class="block w-full text-center px-4 py-2.5 bg-gradient-to-r from-yellow-600 to-yellow-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 transform hover:-translate-y-0.5">
+                        <i class="fas fa-calendar-alt ml-2"></i>
+                        احجز الآن
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <main class="pt-16">
+        <!-- قسم البطل -->
+        <section class="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white py-24 md:py-40 overflow-hidden">
+            <!-- Overlay with gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-transparent z-10"></div>
+            
+            <!-- Animated background elements -->
+            <div class="absolute inset-0 overflow-hidden opacity-30">
+                <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cGF0aCBkPSJNNTQuNjI3IDBsLjgzLjgyOC0xLjQxNSAxLjQxNUw1MS44IDBoMi44Mjd6TTUuMzczIDBsLTIuMjQyIDIuMjQzTDEuNzE2LjgyOCAyLjU0NCAwaDIuODI5ek00OC45NyAwbC04LjQ4NiA4LjQ4NS0xLjQxNS0xLjQxNEw0NC4yODQgMGg0LjY4NnpNMTEuMjg0IDBsNy4wNyA3LjA3TDE1LjkzIDguNDg1IDcuNzU4LjMgNy42LjE0NCA3LjA3IDBoNC4yMTN6TTM0Ljg4NyAwbC01LjY1NyA1LjY1Ny0xLjQxNC0xLjQxNEwzMi4zIDBoMi41ODZ6TTIwLjQ0NCAwTDEyLjEgOC4zNDNsLTEuNDE1LTEuNDE1TDE4LjMxMiAwaDIuMTMyek02MCA1LjM3M3YyLjgyN2wtMi4yNDMtMi4yNDJMNjAgNS4zNzN6TTAgNS4zNzNsMi4yNDIgMi4yNDNMLjgyOCA4LjQ4NSA4LjQ4NS4yNDMgNS42NTcgMi4wNzUgMCA3LjY1N3YtMi4yOHpNNjAgMTEuMjg0djQuNjg2bC03LjA3MS03LjA3TDYwIDExLjI4NHpNMCAxMS4yODRsNy4wNy03LjA3TDUuNjU3IDIuNzU4IDAgOC40MTR2Mi44N3pNMzQuMTQyIDEyLjFsLTUuNjU2IDUuNjU2LTEuNDE5LTEuNDE0IDUuNjU3LTUuNjU3IDEuNDE0IDEuNDE1ek0yMS4xNzIgMTIuMWwxLjQxNSAxLjQxNS01LjY1NyA1LjY1Ni0xLjQxNC0xLjQxNCA1LjY1Ni01LjY1N3pNMjAuNDQ0IDYwbC04LjQ4NS04LjQ4NS0xLjQxNC0xLjQxNCAxMC42MDYgMTAuNjA3LS4wMi4wMi4wMTYuMDE1TDIwLjQ0NCA2MHoiIGZpbGw9IiNENEFGMzciIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-20"></div>
+                <div class="absolute top-20 right-20 w-64 h-64 bg-yellow-500 rounded-full mix-blend-overlay filter blur-3xl opacity-10 animate-float"></div>
+                <div class="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-r from-yellow-600 to-yellow-400 rounded-full mix-blend-overlay filter blur-3xl opacity-5 animate-float animation-delay-2000"></div>
+            </div>
+            
+            <!-- Background image -->
+            <div class="absolute inset-0 bg-[url('../images/djlanight.jpg')] bg-cover bg-center"></div>
+            
+            <div class="container mx-auto px-4 relative z-20">
+                <div class="max-w-2xl">
+                    <!-- Tagline -->
+                    <div class="inline-flex items-center px-4 py-2 bg-yellow-500/20 backdrop-blur-sm rounded-full mb-6 border border-yellow-500/30">
+                        <div class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse mr-2"></div>
+                        <span class="text-sm font-medium text-yellow-300">مفتوح الآن - احجز إقامتك اليوم</span>
+                    </div>
+                    
+                    <!-- Main Heading -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        <span class="bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-400 bg-clip-text text-transparent">منتجع ضفاف دجلة</span><br>
+                        <span class="text-white">تجربة فريدة تجمع بين الفخامة والتراث</span>
+                    </h1>
+                    
+                    <!-- Description -->
+                    <p class="text-lg md:text-xl text-yellow-300 mb-8 max-w-xl leading-relaxed">
+                        استمتع بإقامة لا تُنسى في أحضان الطبيعة الخلابة على ضفاف نهر دجلة، حيث نقدم لكم أرقى مستويات الخدمة والرفاهية في بيئة عراقية أصيلة.
+                    </p>
+                    
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://wa.me/9647771537266?text=مرحباً، أود حجز إقامة في منتجع ضفاف دجلة" target="_blank" rel="noopener noreferrer" class="group relative px-8 py-4 overflow-hidden bg-gradient-to-r from-yellow-600 to-yellow-500 text-white font-medium rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-yellow-500/30 flex items-center">
+                            <span class="relative z-10">احجز إقامتك الآن</span>
+                            <i class="fas fa-arrow-left mr-2 group-hover:translate-x-1 transition-transform duration-300 relative z-10"></i>
+                            <div class="absolute inset-0 bg-gradient-to-r from-yellow-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                        <a href="#features" class="group px-6 py-3.5 border-2 border-yellow-500/30 hover:border-yellow-400/50 text-yellow-300 hover:text-yellow-300 font-medium rounded-full transition-all duration-300 flex items-center backdrop-blur-sm hover:bg-yellow-500/10">
+                            <span class="relative">استكشف المرافق</span>
+                            <i class="fas fa-chevron-down mr-2 text-sm mt-0.5 group-hover:translate-y-0.5 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="mt-12 pt-6 border-t border-yellow-500/10 flex flex-wrap gap-8">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 mr-3">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-yellow-400">4.9</div>
+                                <div class="text-sm text-yellow-500">تقييم الضيوف</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 mr-3">
+                                <i class="fas fa-umbrella-beach"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-yellow-400">من أفخر</div>
+                                <div class="text-sm text-white">منتجعات بغداد</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 mr-3">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-yellow-400">واي فاي مجاني</div>
+                                <div class="text-sm text-yellow-500">في جميع الأرجاء</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 mr-3">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-yellow-400">كهرباء على مدار 24 ساعة</div>
+                                <div class="text-sm text-yellow-500">خدمة مستمرة</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+                <div class="w-10 h-16 rounded-3xl border-2 border-yellow-400/50 flex justify-center p-1">
+                    <div class="w-2 h-2 bg-yellow-400 rounded-full mt-2"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المميزات -->
+        <section id="features" class="relative py-24 bg-gradient-to-b from-gray-900 to-gray-800 overflow-hidden">
+            <!-- Decorative Elements -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-400 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
+                <div class="absolute bottom-0 left-0 w-80 h-80 bg-yellow-600 rounded-full mix-blend-overlay filter blur-3xl opacity-10"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-12">
+                    <span class="inline-block px-4 py-1.5 text-sm font-medium bg-yellow-500/20 text-yellow-300 rounded-full mb-4">خدماتنا</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">تجربة إقامة لا تُنسى</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-300 mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- المشروبات الباردة -->
+                    <div class="group relative bg-gradient-to-br from-blue-800/30 to-blue-900/20 rounded-2xl p-0.5 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10">
+                        <div class="absolute inset-0.5 bg-gradient-to-br from-blue-900/80 to-blue-800/70 rounded-2xl z-0"></div>
+                        <div class="relative z-10 h-full bg-blue-900/50 backdrop-blur-sm rounded-xl p-6 border border-blue-800/30 group-hover:border-blue-500/50 transition-all duration-300 flex flex-col items-center justify-center">
+                            <div class="w-16 h-16 mb-6 rounded-xl bg-blue-500/20 flex items-center justify-center text-2xl text-blue-400 group-hover:rotate-6 transition-transform duration-500">
+                                <i class="fas fa-glass-whiskey"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-100">المشروبات الباردة</h3>
+                        </div>
+                    </div>
+
+                    <!-- المشروبات الساخنة -->
+                    <div class="group relative bg-gradient-to-br from-red-800/30 to-red-900/20 rounded-2xl p-0.5 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-500/10">
+                        <div class="absolute inset-0.5 bg-gradient-to-br from-red-900/80 to-red-800/70 rounded-2xl z-0"></div>
+                        <div class="relative z-10 h-full bg-red-900/50 backdrop-blur-sm rounded-xl p-6 border border-red-800/30 group-hover:border-red-500/50 transition-all duration-300 flex flex-col items-center justify-center">
+                            <div class="w-16 h-16 mb-6 rounded-xl bg-red-500/20 flex items-center justify-center text-2xl text-red-400 group-hover:rotate-6 transition-transform duration-500">
+                                <i class="fas fa-coffee"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-red-100">المشروبات الساخنة</h3>
+                        </div>
+                    </div>
+
+                    <!-- النراجيل -->
+                    <div class="group relative bg-gradient-to-br from-green-800/30 to-green-900/20 rounded-2xl p-0.5 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-500/10">
+                        <div class="absolute inset-0.5 bg-gradient-to-br from-green-900/80 to-green-800/70 rounded-2xl z-0"></div>
+                        <div class="relative z-10 h-full bg-green-900/50 backdrop-blur-sm rounded-xl p-6 border border-green-800/30 group-hover:border-green-500/50 transition-all duration-300 flex flex-col items-center justify-center">
+                            <div class="w-16 h-16 mb-6 rounded-xl bg-green-500/20 flex items-center justify-center text-2xl text-green-400 group-hover:rotate-6 transition-transform duration-500">
+                                <i class="fas fa-smoking"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-green-100">النراجيل</h3>
+                        </div>
+                    </div>
+
+                    <!-- الألعاب -->
+                    <div class="group relative bg-gradient-to-br from-purple-800/30 to-purple-900/20 rounded-2xl p-0.5 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10">
+                        <div class="absolute inset-0.5 bg-gradient-to-br from-purple-900/80 to-purple-800/70 rounded-2xl z-0"></div>
+                        <div class="relative z-10 h-full bg-purple-900/50 backdrop-blur-sm rounded-xl p-6 border border-purple-800/30 group-hover:border-purple-500/50 transition-all duration-300 flex flex-col items-center justify-center">
+                            <div class="w-16 h-16 mb-6 rounded-xl bg-purple-500/20 flex items-center justify-center text-2xl text-purple-400 group-hover:rotate-6 transition-transform duration-500">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-purple-100">الألعاب</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="text-center mt-16">
+                    <a href="#features" class="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-600 to-yellow-500 text-white font-medium rounded-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/20">
+                        <span class="relative z-10">اكتشف المزيد</span>
+                        <span class="ml-3 relative z-10">
+                            <i class="fas fa-arrow-left transition-transform duration-300 group-hover:-translate-x-1"></i>
+                        </span>
+                        <span class="absolute inset-0 bg-gradient-to-r from-yellow-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- قسم اتصل بنا -->
+        <section id="contact" class="py-16 bg-gray-50 dark:bg-gray-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">تواصل معنا</h2>
+                <div class="max-w-4xl mx-auto bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden">
+                    <div class="grid md:grid-cols-2 gap-8 p-8">
+                        <!-- معلومات الاتصال -->
+                        <div class="space-y-6">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">تواصل معنا عبر</h3>
+                            
+                            <!-- رقم الهاتف -->
+                            <div class="flex items-start space-x-3 space-x-reverse">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                                    <i class="fas fa-phone-alt text-green-600 dark:text-green-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700 dark:text-gray-300">اتصل بنا</h4>
+                                    <a href="tel:07771537266" class="text-lg font-bold text-gray-900 dark:text-white hover:text-yellow-500 transition-colors">0777 153 7266</a>
+                                    <p class="text-sm text-green-600 dark:text-green-400 font-medium mt-1">متوفر 24/7</p>
+                                </div>
+                            </div>
+                            
+                            <!-- واتساب -->
+                            <a href="https://wa.me/9647771537266" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 space-x-reverse p-4 bg-green-600 hover:bg-green-700 rounded-lg transition-colors">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+                                    <i class="fab fa-whatsapp text-2xl text-white"></i>
+                                </div>
+                                <div class="text-right">
+                                    <h4 class="font-bold text-white">تواصل معنا على واتساب</h4>
+                                    <p class="text-sm text-white/80">الرد فوري خلال دقائق</p>
+                                </div>
+                            </a>
+                            
+                            <!-- وسائل التواصل الاجتماعي -->
+                            <div class="pt-4">
+                                <h4 class="font-medium text-gray-700 dark:text-gray-300 mb-3">تابعنا على</h4>
+                                <div class="flex space-x-3 space-x-reverse">
+                                    <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-700 flex items-center justify-center text-white transition-colors" aria-label="فيسبوك">
+                                        <i class="fab fa-facebook-f text-xl"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 flex items-center justify-center text-white transition-colors" aria-label="انستغرام">
+                                        <i class="fab fa-instagram text-xl"></i>
+                                    </a>
+                                    <a href="https://www.tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-black hover:bg-gray-900 flex items-center justify-center text-white transition-colors" aria-label="تيك توك">
+                                        <i class="fab fa-tiktok text-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- خريطة -->
+                        <div class="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden">
+                            <div class="h-full flex items-center justify-center p-4">
+                                <div class="text-center">
+                                    <i class="fas fa-map-marker-alt text-4xl text-yellow-500 mb-4"></i>
+                                    <h4 class="font-bold text-gray-800 dark:text-white mb-2">موقعنا</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">ضفاف نهر دجلة، بغداد، العراق</p>
+                                    <a href="#" class="inline-flex items-center text-yellow-500 hover:text-yellow-400 font-medium">
+                                        عرض على الخريطة
+                                        <i class="fas fa-arrow-left mr-2 text-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:justify-between">
+                <!-- روابط التواصل الاجتماعي -->
+                <div class="flex space-x-3 space-x-reverse">
+                    <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition-colors" aria-label="فيسبوك">
+                        <i class="fab fa-facebook-f text-yellow-400"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-black flex items-center justify-center transition-colors" aria-label="تيك توك">
+                        <i class="fab fa-tiktok text-yellow-400"></i>
+                    </a>
+                    <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-pink-600 flex items-center justify-center transition-colors" aria-label="انستغرام">
+                        <i class="fab fa-instagram text-yellow-400"></i>
+                    </a>
+                </div>
+                
+                <!-- معلومات الاتصال -->
+                <div class="text-center md:text-right">
+                    <div class="flex items-center justify-center md:justify-end space-x-2 space-x-reverse text-sm text-yellow-500">
+                        <i class="fas fa-phone-alt text-yellow-400"></i>
+                        <a href="tel:+9647712345678" class="hover:text-yellow-400 transition-colors">+964 771 234 5678</a>
+                    </div>
+                    <div class="mt-1 text-xs text-green-500 font-medium">متوفر 24/7</div>
+                </div>
+            </div>
+            
+            <!-- حقوق النشر -->
+            <div class="pt-6 mt-8 border-t border-gray-800">
+                <p class="text-xs text-center text-gray-600">
+                    &copy; 2023 منتجع ضفاف دجلة. جميع الحقوق محفوظة.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+                mobileMenuButton.setAttribute('aria-expanded', !expanded);
+            });
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Adjust for fixed header
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+        });
+        
+        // Add scroll event for header
+        const header = document.querySelector('header');
+        if (header) {
+            let lastScroll = 0;
+            
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll <= 0) {
+                    header.classList.remove('scrolled');
+                    return;
+                }
+                
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    // Scrolling down
+                    header.classList.add('scrolled');
+                } else if (currentScroll < lastScroll && currentScroll > 100) {
+                    // Scrolling up
+                    header.classList.add('scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            });
+        }
+    </script>
+</body>
+</html>
